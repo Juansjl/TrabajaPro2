@@ -3,6 +3,7 @@ public abstract class Juego {
 	protected Mazo mazo;
 	protected Jugador jugador1;
 	protected Jugador jugador2;
+	protected Jugador jugadorEnTurno; //apunta al jugador quien tiene el turno
 	
 	final static int MINATR;
 	final static int MAXATR;
@@ -13,7 +14,8 @@ public abstract class Juego {
 		MINATR = 3;
 		MAXATR = 6;
 		jugador1 = new Jugador(nombreJ1);
-		jugador2 = new Jugador(nombreJ2);		
+		jugador2 = new Jugador(nombreJ2);
+		jugadorEnTurno = jugador1;
 	}
 	
 	//----JUGAR----
